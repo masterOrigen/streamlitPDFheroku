@@ -30,8 +30,8 @@ def get_gemini_response(prompt):
     try:
         model = genai.GenerativeModel('gemini-pro')
         response = model.generate_content(prompt, generation_config=genai.types.GenerationConfig(
-            temperature=0.3,
-            max_output_tokens=2000,
+            temperature=0.2,
+            max_output_tokens=4000,
         ))
         return response.text
     except Exception as e:
